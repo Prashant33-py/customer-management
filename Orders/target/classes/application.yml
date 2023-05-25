@@ -1,0 +1,25 @@
+server:
+    port: 8082
+
+spring:
+    application:
+        name: ORDER-SERVICE
+
+    datasource:
+        url: jdbc:mysql://localhost:3306/order_data
+        username: root
+        password: root123
+
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+
+eureka:
+    instance:
+        prefer-ip-address: true
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        service-url:
+            defaultZone: http://localhost:8761/eureka
